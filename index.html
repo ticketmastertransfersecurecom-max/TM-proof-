@@ -1320,7 +1320,7 @@ function openReceipt(){go('receipt');var e=cur,sub=0,rows='';
  +'<div class="rcsec"><h4>Fees</h4><div class="row rcfee"><span>Service Fee: '+usd(feeEach)+' x '+n+'</span><span>'+usd(fees)+'</span></div>'+(exRows?'<h4>Extras</h4>'+exRows:'')+'<h4>Delivery</h4><div class="row rcfee"><span>Mobile App Only</span><span>FREE</span></div></div>'
  +'<div class="row rcbar rctot"><b>Total</b><b>USD&nbsp;&nbsp;'+usd(sub+fees+ex)+'</b></div>'
  +'<div class="rcpay"><h4>Payment</h4><small>Date</small><div>'+shortD(S.when)+'</div><small>Payment Method</small><div>'+(S.pay==='apple'?'Apple Pay':S.pay==='paypal'?'PayPal':esc(CARD().brand)+'&nbsp;&nbsp;&nbsp;****'+esc(CARD().last4))+'</div><small>Total</small><div>USD '+usd(sub+fees+ex)+'</div><small>Name</small><div>'+esc((ST.user.name||'').toUpperCase())+'</div></div>'
- +(ST.rcnote?'<p class="rcnote">'+esc(ST.rcnote).replace(/\n/g,'<br>')+'</p>':'')+'<p class="rcdemo">Passline class demo · no payment was taken · not a proof of purchase</p>';rcStage(html)}
+ 
 // Receipt loads like the real app: a small spinner (2.5s), then "Retrieving Order Details" (1.7s), then the receipt fades in
 var rcT=[];function rcStage(html){rcT.forEach(clearTimeout);var b=$('rcBody');
  b.innerHTML='<div class="rcload1"><span class="arc"></span></div>';
