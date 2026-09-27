@@ -1144,7 +1144,7 @@ var authed=false;
 /* One-time code: a new random 6-digit code every time, delivered as a pretend phone notification.
    Tap the notification to fill the code in. Only the code that was sent will work. */
 function pushCode(code){var old=$('pushN');if(old)old.remove();var n=document.createElement('button');n.id='pushN';n.className='pushn';n.setAttribute('aria-label','Verification code notification. Tap to fill in the code.');
- n.innerHTML='<span class="pnic"><em style="opacity:0">p</em><img src="p.PNG" alt="" onload="var e=this.previousSibling;if(e)e.remove()" onerror="if(this.src.indexOf(\'p.PNG\')>-1){this.src=\'p.png\'}else{var e=this.previousSibling;if(e)e.style.opacity=\'1\';this.remove()}"></span><span class="pnt"><span class="row"><b>Passline</b><small>now</small></span><span>Your verification code is '+code+'. Don\'t share this code with anyone.</span></span>';
+ n.innerHTML='<span class="pnic"><em style="opacity:0">p</em><img src="p.PNG" alt="" onload="var e=this.previousSibling;if(e)e.remove()" onerror="if(this.src.indexOf(\'p.PNG\')>-1){this.src=\'p.png\'}else{var e=this.previousSibling;if(e)e.style.opacity=\'1\';this.remove()}"></span><span class="pnt"><span class="row"><b>Ticketmaster</b><small>now</small></span><span>Your verification code is '+code+'. Don\'t share this code with anyone.</span></span>';
  n.onclick=function(){var o=$('otp');if(o){o.value=code;o.dispatchEvent(new Event('input'))}hide()};
  function hide(){n.classList.remove('in');setTimeout(function(){n.remove()},350)}
  var y0=null,dy=0,moved=false;
